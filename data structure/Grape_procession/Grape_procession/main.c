@@ -30,9 +30,9 @@ void insertVertex(graphType *g, int v){    // 그래프 g에 정정 v를 삽입�
 
 void insertEdge(graphType *g, int u, int v){// 그래프 g에 간선(u, v)를 삽입하는 연산
     if(u >= g->n || v >= g->n){
-        printf("\n 그래프에 없는 정점입니다!");
         return;
     }
+
     g -> adjMatrix[u][v] = 1;               // 삽입한 간선에 대한 2차원 배열 값을 1로 설정
 }
                                             // 그래프 g의 2차원 배열 값을 순서대로 출력하는 연산
@@ -69,8 +69,8 @@ int main(void){
     insertEdge(G1, 3, 0);
     insertEdge(G1, 3, 1);
 
-//    printf("\n G1의 인접 행렬");
-//    print_adjMatrix(G1);
+    printf("\n G1의 인접 행렬");
+    print_adjMatrix(G1);
     
     createGraph(G2);
     for(int i=0; i<3; i++)
@@ -82,5 +82,8 @@ int main(void){
     insertEdge(G2, 1, 2);
     insertEdge(G2, 1, 3);
     insertEdge(G2, 2, 1);
+    
+    printf("\n G2의 인접 행렬");
+    print_adjMatrix(G2);
     
 }
