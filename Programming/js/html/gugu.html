@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    div {
+      display: inline-block;
+      padding: 0 20px 30px 20px;
+      margin: 15px;
+      border: 1px solid #ccc;
+      line-height: 2;
+    }
+    div h3 {
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+  <body>
+    <script>
+      for (var x = 1; x <= 9; x++) {
+        document.write("<div>");
+        document.write("<h3>" + x + "단</h3>");
+        for (var y = 1; y <= 9; y++) {
+          document.write(x + " X " + y + " = " + x * y + "<br>");
+        }
+        document.write("</div>");
+      }
+    </script>
+
+    <ul></ul>
+  </body>
+</html>
